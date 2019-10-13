@@ -1,0 +1,157 @@
+<templateSet group="user">
+  <template name="mcontroller" value="&lt;?php&#10;&#10;namespace $NAMESPACE$\Controller\$ACTION$;&#10;&#10;use Magento\Framework\App\Action\Action;&#10;use Magento\Framework\App\Action\Context;&#10;use Magento\Framework\View\Result\PageFactory;&#10;&#10;class $CLASS$ extends Action&#10;{&#10;&#10;    /**&#10;     * @var PageFactory&#10;     */&#10;    protected $resultPageFactory;&#10;&#10;    /**&#10;     * @var Context&#10;     */&#10;    protected $context;&#10;&#10;    /**&#10;     * Finder constructor.&#10;     *&#10;     * @param Context     $context&#10;     * @param PageFactory $resultPageFactory&#10;     */&#10;    public function __construct(&#10;        Context $context,&#10;        PageFactory $resultPageFactory&#10;    ) {&#10;        parent::__construct($context);&#10;        $this-&gt;resultPageFactory = $resultPageFactory;&#10;        $this-&gt;context = $context;&#10;    }&#10;&#10;    /**&#10;     * Load the page defined in view/frontend/layout/samplenewpage_index_index.xml&#10;     *&#10;     * @return \Magento\Framework\View\Result\\Magento\Framework\View\Result\Page&#10;     */&#10;    public function execute()&#10;    {&#10;        return $this-&gt;resultPageFactory-&gt;create();&#10;    }&#10;}&#10;" description="Magento 2 Controller Template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mblock" value="&lt;?php&#10;&#10;namespace $NAMESPACE$\Block;&#10;&#10;use Magento\Framework\View\Element\Template;&#10;use Magento\Framework\View\Element\Template\Context;&#10;&#10;class $CLASS$ extends Template&#10;{&#10;&#10;    /**&#10;     * Constructor&#10;     *&#10;     * @param Context $context&#10;     * @param array   $data&#10;     */&#10;    public function __construct(&#10;        Context $context,&#10;        array $data = []$DEPENDENCY$&#10;    ) {&#10;        parent::__construct($context, $data);&#10;    }&#10;}&#10;" description="Magento 2 Block Template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPENDENCY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mroutes" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:App/etc/routes.xsd&quot;&gt;&#10;    &lt;router id=&quot;$AREA$&quot;&gt;&#10;        &lt;route id=&quot;$FRONTNAME$&quot; frontName=&quot;$FRONTNAME$&quot;&gt;&#10;            &lt;module name=&quot;$MODULE$&quot; /&gt;&#10;        &lt;/route&gt;&#10;    &lt;/router&gt;&#10;&lt;/config&gt;&#10;" description="Magento 2 routes.xml Template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="AREA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FRONTNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="mdi" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:ObjectManager/etc/config.xsd&quot;&gt;&#10;    &lt;preference for=&quot;$NAMESPACE$\Api\$CLASSNAME$Interface&quot; type=&quot;$NAMESPACE$\Service\$CLASSNAME$&quot; /&gt;&#10;&lt;/config&gt;" description="Magento 2 di.xml Template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASSNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="mmodule" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Module/etc/module.xsd&quot;&gt;&#10;    &lt;module name=&quot;$MODULE$&quot; setup_version=&quot;1.0.0&quot; /&gt;&#10;&lt;/config&gt;&#10;" description="Magento 2 module.xml Template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="mlayout" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;page xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; layout=&quot;1column&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:View/Layout/etc/page_configuration.xsd&quot;&gt;&#10;    &lt;body&gt;&#10;        &lt;referenceContainer name=&quot;content&quot;&gt;&#10;            &lt;block class=&quot;$NAMESPACE$\$MODULE$\Block\$BLOCK$&quot; name=&quot;$NAME$&quot; template=&quot;$NAMESPACE$_$MODULE$::$TEMPLATE$.phtml&quot; /&gt;&#10;        &lt;/referenceContainer&gt;&#10;    &lt;/body&gt;&#10;&lt;/page&gt;" description="Magento 2 basic layout.xml template" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BLOCK" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEMPLATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="msystem" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Config:etc/system_file.xsd&quot;&gt;&#10;    &lt;system&gt;&#10;        &lt;section id=&quot;$MOODULE_NAME$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;300&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;1&quot; showInStore=&quot;1&quot;&gt;&#10;            &lt;label&gt;$LABEL$&lt;/label&gt;&#10;            &lt;tab&gt;$TAB$&lt;/tab&gt;&#10;            &lt;resource&gt;$RESOURCE$&lt;/resource&gt;&#10;            &lt;group id=&quot;$MOODULE_NAME$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;300&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;                &lt;label&gt;$LABEL$&lt;/label&gt;&#10;                &lt;field id=&quot;$FIELD_ID$&quot; translate=&quot;label&quot; type=&quot;select&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;1&quot; showInStore=&quot;1&quot;&gt;&#10;                    &lt;label&gt;$FIELD_LABEL$&lt;/label&gt;&#10;                    &lt;source_model&gt;$SOURCE_MODEL$&lt;/source_model&gt;&#10;                &lt;/field&gt;&#10;            &lt;/group&gt;&#10;        &lt;/section&gt;&#10;    &lt;/system&gt;&#10;&lt;/config&gt;&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="MOODULE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TAB" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD_ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD_LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SOURCE_MODEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="mtest" value="&lt;?php&#10;&#10;namespace $NAMESPACE$;&#10;&#10;use PHPUnit_Framework_TestCase;&#10;&#10;class $CLASS$Test extends PHPUnit_Framework_TestCase&#10;{&#10;&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="mbcontroller" value="&lt;?php&#10;namespace $COMPANY$\$MODULE$\Controller\Adminhtml\$DIR$;&#10;&#10;use Magento\Backend\App\Action as BackendAction;&#10;use Magento\Backend\App\Action\Context;&#10;use Magento\Framework\View\Result\PageFactory;&#10;&#10;class $ACTION_NAME$ extends BackendAction&#10;{&#10;&#10;    const ADMIN_RESOURCE = '$COMPANY$_$MODULE$::$ACTION_LOWER$';&#10;&#10;    const PAGE_TITLE = '$PAGE_TITLE$';&#10;&#10;    /**&#10;     * @var PageFactory&#10;     */&#10;    protected $resultPageFactory;&#10;&#10;    /**&#10;     * @param Context $context&#10;     * @param PageFactory $resultPageFactory&#10;     */&#10;    public function __construct(&#10;        Context $context,&#10;        PageFactory $resultPageFactory&#10;    ) {&#10;        parent::__construct($context);&#10;        $this-&gt;resultPageFactory = $resultPageFactory;&#10;    }&#10;&#10;    /**&#10;     * Index action&#10;     *&#10;     * @return \Magento\Framework\View\Result\Page&#10;     */&#10;    public function execute()&#10;    {&#10;        /** @var \Magento\Framework\View\Result\Page $resultPage */&#10;        $resultPage = $this-&gt;resultPageFactory-&gt;create();&#10;        $resultPage-&gt;setActiveMenu(static::ADMIN_RESOURCE);&#10;        $resultPage-&gt;addBreadcrumb(__(static::PAGE_TITLE), __(static::PAGE_TITLE));&#10;        $resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__(static::PAGE_TITLE));&#10;&#10;        return $resultPage;&#10;    }&#10;&#10;    /**&#10;     * Is the user allowed to view the blog post grid.&#10;     *&#10;     * @return bool&#10;     */&#10;    protected function _isAllowed()&#10;    {&#10;        return $this-&gt;_authorization-&gt;isAllowed(static::ADMIN_RESOURCE);&#10;    }&#10;&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="COMPANY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DIR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION_LOWER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PAGE_TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="mmenu" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Backend:etc/menu.xsd&quot;&gt;&#10;    &lt;menu&gt;&#10;        &lt;add id=&quot;$NAMESPACE$::$ACTION$&quot; action=&quot;$URL$&quot; title=&quot;$TITLE$&quot; module=&quot;$NAMESPACE$&quot; sortOrder=&quot;100&quot; parent=&quot;Magento_Backend::content&quot; resource=&quot;$NAMESPACE$::$ACTION$&quot; /&gt;&#10;    &lt;/menu&gt;&#10;&lt;/config&gt;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="macl" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Acl/etc/acl.xsd&quot;&gt;&#10;    &lt;acl&gt;&#10;        &lt;resources&gt;&#10;            &lt;resource id=&quot;Magento_Backend::admin&quot;&gt;&#10;                &lt;resource id=&quot;Magento_Backend::content&quot;&gt;&#10;                    &lt;resource id=&quot;$NAMESPACE$::$ACTION$&quot; title=&quot;$TITLE$&quot; sortOrder=&quot;10&quot; /&gt;&#10;                &lt;/resource&gt;&#10;            &lt;/resource&gt;&#10;        &lt;/resources&gt;&#10;    &lt;/acl&gt;&#10;&lt;/config&gt;&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="mgcontainer" value="&lt;?php&#10;&#10;namespace $COMPANY$\$MODULE$\Block\Adminhtml;&#10;&#10;use Magento\Backend\Block\Widget\Grid\Container;&#10;&#10;class $CLASS$ extends Container&#10;{&#10;    protected function _construct()&#10;    {&#10;        $this-&gt;_controller = 'adminhtml_$CONTROLLER$';&#10;        $this-&gt;_blockGroup = '$COMPANY$_$MODULE$';&#10;        $this-&gt;_headerText = __('$TITLE$');&#10;        parent::_construct();&#10;    }&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="COMPANY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="mjquery" value=";require(['jquery'], function ($) {&#10;&#10;    /**&#10;     * Declare a namespace if it doesn't already&#10;     * exist.&#10;     */&#10;    if (!$.$COMPANY$) {&#10;        $.$COMPANY$ = {};&#10;    }&#10;&#10;    /**&#10;     * Colour switching plugin declaration.&#10;     *&#10;     * @param element&#10;     * @param  options&#10;     * @constructor&#10;     */&#10;    $.$COMPANY$.$MODULE$ = function (element, options) {&#10;&#10;        /**&#10;         * This variable is used because it's&#10;         * easier than binding `this`&#10;         *&#10;         * @type {$.$COMPANY$.$MODULE$}&#10;         */&#10;        var base = this;&#10;&#10;        /**&#10;         * Accessor to the element we are manipulating.&#10;         *&#10;         * @type {*|jQuery|HTMLElement}&#10;         */&#10;        base.$element = $(element);&#10;        base.element = element;&#10;&#10;        /**&#10;         * Add a reverse reference to the plugin.&#10;         */&#10;        base.$element.data(&quot;$COMPANY$.$MODULE$&quot;, base);&#10;&#10;        /**&#10;         * Plugin constructor&#10;         */&#10;        base.init = function () {&#10;            base.options = $.extend({}, $.$COMPANY$.$MODULE$.defaultOptions, options);&#10;&#10;        };&#10;&#10;        /**&#10;         * Initialize the plugin.&#10;         */&#10;        base.init();&#10;    };&#10;&#10;    /**&#10;     * Default options for the plugin.&#10;     *&#10;     * @type&#10;     */&#10;    $.$COMPANY$.$MODULE$.defaultOptions = {};&#10;&#10;    /**&#10;     * Setup the plugin, this will override the default&#10;     * options with the object passed in instantiation.&#10;     *&#10;     * @constructor&#10;     *&#10;     * @param options&#10;     */&#10;    $.fn.$COMPANY$_$MODULE$ = function&#10;        (options) {&#10;        return this.each(function () {&#10;            (new $.$COMPANY$.$MODULE$(this, options));&#10;        });&#10;    };&#10;&#10;});" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="COMPANY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mschema" value="&lt;?php namespace $NAMESPACE$\Setup;&#10;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\DB\Ddl\Table;&#10;&#10;class InstallSchema implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * Installs DB schema for a module&#10;     *&#10;     * @param SchemaSetupInterface $setup&#10;     * @param ModuleContextInterface $context&#10;     * @return $this&#10;     */&#10;    public function install(&#10;    SchemaSetupInterface $setup,&#10;    ModuleContextInterface $context $DEPENDENCY$&#10;    )&#10;    {&#10;        $installer = $setup;&#10;&#10;        $installer-&gt;startSetup();&#10;&#10;&#10;        $installer-&gt;endSetup();&#10;&#10;        return $this;&#10;    }&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPENDENCY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mresourcemodel" value="&lt;?php&#10;&#10;namespace $NAMESPACE$\Model\ResourceModel;&#10;&#10;use Magento\Framework\Exception\LocalizedException;&#10;use Magento\Framework\Model\AbstractModel;&#10;use Magento\Framework\Model\ResourceModel\Db\AbstractDb;&#10;use Magento\Framework\Model\ResourceModel\Db\Context;&#10;use Magento\Framework\Stdlib\DateTime\DateTime;&#10;&#10;/**&#10; * Class $CLASS_NAME$&#10; *&#10; * @package $NAMESPACE$\Model\ResourceModel&#10; */&#10;class $CLASS_NAME$ extends AbstractDb&#10;{&#10;    /**&#10;     * Initialize resource model&#10;     *&#10;     * @return void&#10;     */&#10;    protected function _construct()&#10;    {&#10;        $this-&gt;_init('$TABLE_NAME$', '$POST_ID$');&#10;    }&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TABLE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="POST_ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="mmodel" value="&lt;?php&#10;&#10;namespace $NAMESPACE$\Model;&#10;&#10;use Magento\Framework\Model\AbstractModel;&#10;&#10;/**&#10; * Class $CLASS$&#10; *&#10; * @package $NAMESPACE$\Model&#10; */&#10;class $CLASS$ extends AbstractModel&#10;{&#10;&#10;    /**&#10;     * Prefix of model events names&#10;     *&#10;     * @var string&#10;     */&#10;    protected $_eventPrefix = '$EVENT_PREFIX$';&#10;&#10;    /**&#10;     * Initialize resource model&#10;     *&#10;     * @return void&#10;     */&#10;    protected function _construct()&#10;{&#10;    $this-&gt;_init('$NAMESPACE$\Model\ResourceModel\$CLASS$');&#10;}&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EVENT_PREFIX" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mcollection" value="&lt;?php&#10;&#10;namespace $NAMESPACE$\Model\ResourceModel\$RESOURCE$;&#10;&#10;use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;&#10;&#10;/**&#10; * Class Collection&#10; *&#10; * @package $NAMESPACE$\Model\ResourceModel\$RESOURCE$&#10; */&#10;class Collection extends AbstractCollection&#10;{&#10;    /**&#10;     * @var string&#10;     */&#10;    protected $_idFieldName = '$ID_FIELD_NAME$';&#10;&#10;    /**&#10;     * Define the resource model &amp; the model.&#10;     *&#10;     * @return $this&#10;     */&#10;    protected function _construct()&#10;    {&#10;        $this-&gt;_init('$NAMESPACE$\Model\$RESOURCE$', '$NAMESPACE$\Model\ResourceModel\$RESOURCE$');&#10;&#10;        return $this;&#10;    }&#10;&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ID_FIELD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>

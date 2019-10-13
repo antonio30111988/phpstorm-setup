@@ -1,0 +1,7 @@
+<templateSet group="PHP">
+  <template name="getf" value="protected function get$NAME$()&#10;{&#10;    if(!$this-&gt;$VAR$) {&#10;       $this-&gt;$VAR$ = $QUERY$&#10;    }&#10;    &#10;    return $this-&gt;$VAR$$END$&#10;}" description="Setup get a protected variable function" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="QUERY" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+</templateSet>
