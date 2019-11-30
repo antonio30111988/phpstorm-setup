@@ -1,24 +1,22 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
-      <mapping pattern="*.js.flow" type="Flow" />
-      <mapping pattern="*.js.flow" type="Flow" />
       <mapping pattern=".htpasswd" type="PLAIN_TEXT" />
       <mapping pattern=".env.testing" type="PLAIN_TEXT" />
-      <mapping pattern="cronjob" type="PLAIN_TEXT" />
+      <mapping pattern="AUTH" type="PLAIN_TEXT" />
       <mapping pattern="ddd" type="PLAIN_TEXT" />
       <mapping pattern="cron-app" type="PLAIN_TEXT" />
       <mapping pattern="cron-api" type="PLAIN_TEXT" />
       <mapping pattern="aws-credentials" type="PLAIN_TEXT" />
-      <mapping pattern="AUTH" type="PLAIN_TEXT" />
+      <mapping pattern="cronjob" type="PLAIN_TEXT" />
       <mapping pattern="aws-config" type="PLAIN_TEXT" />
       <mapping pattern=".env." type="PLAIN_TEXT" />
       <mapping pattern="crontab" type="PLAIN_TEXT" />
-      <mapping ext="example" type="PLAIN_TEXT" />
       <mapping ext="copy" type="PLAIN_TEXT" />
-      <mapping ext="sqlite" type="PLAIN_TEXT" />
-      <mapping ext="otf" type="PLAIN_TEXT" />
       <mapping ext="sample" type="PLAIN_TEXT" />
+      <mapping ext="example" type="PLAIN_TEXT" />
+      <mapping ext="otf" type="PLAIN_TEXT" />
+      <mapping ext="sqlite" type="PLAIN_TEXT" />
       <mapping ext="lock" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
